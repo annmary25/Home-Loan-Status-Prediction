@@ -24,7 +24,7 @@ class DataIngestion:
             df = pd.read_csv("/Users/admin/Loan-Status-Prediction/train.csv")
             logging.info("Read the dataset as dataframe")
 
-            train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
+            train_set, test_set = train_test_split(df, test_size=0.2, random_state=0)
             logging.info("Train test split initiated")
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok = True)

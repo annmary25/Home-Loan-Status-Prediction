@@ -8,11 +8,11 @@ from src.utils import save_object,evaluate_models
 
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score
-from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB, BernoulliNB
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, BaggingClassifier
 
 @dataclass
 class ModelTrainerConfig:
@@ -32,10 +32,47 @@ class ModelTrainer:
                 "Decision Tree": DecisionTreeClassifier(),
                 "Gaussian Naive Bayes": GaussianNB(),
                 "Random Forest": RandomForestClassifier(),
-                "Support Vector": SVC()
+                "Support Vector": SVC(),
+                "Gradient Boost": GradientBoostingClassifier(),
+                "BaggingClassifier": BaggingClassifier(),
+                "BernoulliNB": BernoulliNB() 
             }
-            model_report:dict=evaluate_models(x_train=x_train, y_train=y_train, x_test=x_test, y_test=y_test, models=models)
+            params = {
+                "Logistic Regression": {
+                    "solver": ['lbfgs', 'liblinear', 'newton-cg', 'newton-cholesky', 'sag', 'saga'],
+                },
+                "K Nearest Neighbors": {
+                    "algorithm": ['auto', 'ball_tree', 'kd_tree', 'brute']
+                },
+                "Decision Tree": {
+                    "splitter": ["best", "random"],
+                    "criterion": ["gini", "entropy", "log_loss"]
+                },
+                "Gaussian Naive Bayes": {},
+                "Random Forest": {
+                    "criterion": ["gini", "entropy", "log_loss"],
+                    "min_samples_split": [2,3,4, 10, 20, 30, 100, 200, 300],
+                    "max_features":["sqrt", "log2", None]
+                },
+                "Support Vector": {
+                    "gamma": ['scale', 'auto'],
+                    "decision_function_shape": ['ovo', 'ovr'],
+                    "break_ties": [False]
+                },
+                "Gradient Boost": {
+                    "loss": ["log_loss", "deviance", "exponential"]
+                },
+                "BaggingClassifier": {
+                    "n_estimators": [1,10,100,500,1000]
+                },
+                "BernoulliNB": {
+                    "force_alpha": [True, False],
+                    "fit_prior": [True, False]
+                }
+            }
+            model_report:dict=evaluate_models(x_train=x_train, y_train=y_train, x_test=x_test, y_test=y_test, models=models, params=params)
             logging.info("Generated model report")
+            print(model_report)
 
             best_model_score = max(sorted(model_report.values()))
             best_model_name = list(model_report.keys())[list(model_report.values()).index(best_model_score)]
