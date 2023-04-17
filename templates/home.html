@@ -1,0 +1,128 @@
+<html>
+<body>
+    <div class="login">
+       <h1>HOME LOANS</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h2>
+            <legend>Calculate your home loan eligibility</legend>
+        </h2>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="Gender" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="Male">
+                    Male
+                </option>
+                <option value="Female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Married</label>
+            <select class="form-control" name="Married" placeholder="Enter your married status" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="Yes">
+                    Yes
+                </option>
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Dependents</label>
+            <select class="form-control" name="Dependents" placeholder="Enter number of dependents" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="0">
+                    0
+                </option>
+                <option value="1">
+                    1
+                </option>
+                <option value="2">
+                    2
+                </option>
+                <option value="3+">
+                    3+
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Education</label>
+            <select class="form-control" name="Education"
+                placeholder="Enter you Education level" required>
+                <option class="placeholder" selected disabled value="">Select Education</option>
+                <option value="Graduate">
+                    Graduate
+                </option>
+                <option value="Not Graduate">
+                    Not Graduate
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Self Employed</label>
+            <select class="form-control" name="Self_Employed"
+                placeholder="Enter your employment status" required>
+                <option class="placeholder" selected disabled value="">Select Employment Status</option>
+                <option value="Yes">
+                    Yes
+                </option>   
+                <option value="No">
+                    No
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Gross Income(Monthly)</label>
+            <input class="form-control" type="number" name="ApplicantIncome" style="width: 300px"
+                placeholder="Enter your gross income" min='1500' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Coapplicant Gross Income(Monthly)</label>
+            <input class="form-control" type="number" name="CoapplicantIncome" style="width: 300px"
+                placeholder="Enter coapplicant income " min='0' max='1000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Amount</label>
+            <input class="form-control" type="number" name="LoanAmount" style="width: 300px"
+                placeholder="Enter loan amount " min='90000' max='7000000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Loan Amount Term (Months)</label>
+            <input class="form-control" type="number" name="Loan_Amount_Term" style="width: 300px"
+                placeholder="Enter loan amount term in months " min='12' max='480' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Credit History</label>
+            <input class="form-control" type="number" name="Credit_History" style="width: 150px"
+                placeholder="Enter Credit History " min='0' max='1' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Property Area</label>
+            <select class="form-control" name="Property_Area" placeholder="Enter property area type" required>
+                <option class="placeholder" selected disabled value="">Select</option>
+                <option value="Urban">
+                    Urban
+                </option>
+                <option value="Semiurban">
+                    Semiurban
+                </option>
+                <option value="Rural">
+                    Rural
+                </option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict Home Loan Status" required />
+        </div>
+    </form>
+    <h2>
+        {{results}}
+    </h2>
+   <body>
+</html>
