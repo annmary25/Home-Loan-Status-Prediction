@@ -1,8 +1,8 @@
+dill
+flask
 numpy
 pandas
 seaborn
 matplotlib
 scikit-learn
-dill
-flask
-#-e .
+-e .
