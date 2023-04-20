@@ -9,7 +9,7 @@ def get_requirements(file_path:str)->List[str]:
     return requirements
 
 setup(
-    name = "Loan Status Prediction",
+    name = "Home Loan Status Prediction",
     version = '0.0.1',
     author = "Ann Mary Shaju",
     author_email = "shajuannmary01@gmail.com",
