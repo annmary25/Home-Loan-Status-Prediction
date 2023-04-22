@@ -6,7 +6,7 @@ name: Build and deploy container app to Azure Web App - home-loan-status
 on:
   push:
     branches:
-      - main
+      - master ########### Made to master instead of main so that azure workflow won't run
   workflow_dispatch:
 
 jobs:
