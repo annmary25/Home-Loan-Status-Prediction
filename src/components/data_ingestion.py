@@ -21,7 +21,7 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method")
         try:
-            df = pd.read_csv("/Users/admin/Loan-Status-Prediction/train.csv")
+            df = pd.read_csv("/Users/admin/Loan-Status-Prediction/data.csv")
             logging.info("Read the dataset as dataframe")
 
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=0)

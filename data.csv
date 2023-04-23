@@ -1,4 +1,4 @@
-Unnamed: 0,Loan_ID,Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,Property_Area,Loan_Status
+,Loan_ID,Gender,Married,Dependents,Education,Self_Employed,ApplicantIncome,CoapplicantIncome,LoanAmount,Loan_Amount_Term,Credit_History,Property_Area,Loan_Status
 0,LP001002,Male,No,0,Graduate,No,58490,0.0,,360.0,1.0,Urban,Y
 1,LP001003,Male,Yes,1,Graduate,No,45830,15080.0,1280000.0,360.0,1.0,Rural,N
 2,LP001005,Male,Yes,0,Graduate,Yes,30000,0.0,660000.0,360.0,1.0,Urban,Y

@@ -53,9 +53,9 @@ class CustomData:
                 "Dependents": [self.Dependents],
                 "Education": [self.Education],
                 "Self_Employed": [self.Self_Employed],
-                "ApplicantIncome": [self.ApplicantIncome/10],
-                "CoapplicantIncome": [self.CoapplicantIncome/10],
-                "LoanAmount": [self.LoanAmount/10000],
+                "ApplicantIncome": [self.ApplicantIncome],
+                "CoapplicantIncome": [self.CoapplicantIncome],
+                "LoanAmount": [self.LoanAmount],
                 "Loan_Amount_Term": [self.Loan_Amount_Term],
                 "Credit_History": [self.Credit_History],
                 "Property_Area": [self.Property_Area]
