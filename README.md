@@ -50,11 +50,11 @@ https://user-images.githubusercontent.com/47209907/233424944-48b39b37-3e26-4866-
 - Finally run the project using `python app.py`
 
 ## Using Docker
-- 
 
-docker pull annmary25/home-loan-status-prediction:main
-docker pull annmary25/home-loan-status-prediction:latest
+Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-status-prediction/general
 
+- Pull the code using `docker pull annmary25/home-loan-status-prediction:main`
+- Run the project using `python app.py`
 
 ## Project Approach
 
@@ -86,8 +86,3 @@ docker pull annmary25/home-loan-status-prediction:latest
 #### Model deployment
 - Constructed a Flask web application with a Home Loan Status Prediction model to predict loan approvals and rejections and decreased loan approval time by 90% 
 - Dockerized the application, implemented a CI/CD pipeline, and deployed the app on Azure
-
-Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-status-prediction/general
-
-
-
