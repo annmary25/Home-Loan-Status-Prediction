@@ -13,7 +13,7 @@ Constructed a Flask web application with a Home Loan Status Prediction model tha
 Dockerized the application, implemented a CI/CD pipeline, and deployed the app on Azure
 
 ## Dataset
-The dataset consisted of 12 independant variables and 1 dependant variable
+The dataset consists of 12 independant variables and 1 dependant variable
 #### Independant Variables:
 - `Loan_ID` - unique identifier for each loan
 - `Gender` - Gender of the loan applicant
@@ -25,8 +25,8 @@ The dataset consisted of 12 independant variables and 1 dependant variable
 - `CoapplicantIncome` - Monthly gross income of the Coapplicant
 - `LoanAmount` - Loan amount needed by the applicant
 - `Loan_Amount_Term` - Loan amount term required by the applicant (In months)
-- `Credit_History` - Indicates whether the applicant has good credit history or not
-- `Property_Area` - Whether the property area is Urban, Semi-urban or Rural
+- `Credit_History` - Credit history of the applicant
+- `Property_Area` - Property area type of the applicant 
 #### Dependant variable:
 - `Loan_Status` - Indicates if the loan is approved or rejected
 
@@ -39,6 +39,22 @@ https://user-images.githubusercontent.com/47209907/233424931-c8f31a36-b53d-49be-
 
 
 https://user-images.githubusercontent.com/47209907/233424944-48b39b37-3e26-4866-9b03-55292f61d8c1.mov
+
+## Run Project locally 
+
+#### Using github
+- Clone the complete project using `git clone https://github.com/annmary25/Home-Loan-Status-Prediction.git`
+- Create python3 virtual environment using `virtualenv -p python3 {name_of_environment}`
+- Activate the environment using `source {path_to_virtual_environment}/bin/activate`
+- Install the dependencies using `pip install -r requirements.txt`
+- Finally run the project using `python app.py`
+
+## Using Docker
+- 
+
+docker pull annmary25/home-loan-status-prediction:main
+docker pull annmary25/home-loan-status-prediction:latest
+
 
 ## Project Approach
 
