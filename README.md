@@ -37,7 +37,7 @@ The dataset consists of 12 independant variables and 1 dependant variable
 
 - `Loan_Status` - Indicates if the loan is approved or rejected
 
-Link to data used in the project - https://github.com/annmary25/Home-Loan-Status-Prediction/blob/main/data.csv
+_**Link to data used in the project**_ - https://github.com/annmary25/Home-Loan-Status-Prediction/blob/main/data.csv
 
 ## Demo
 
