@@ -52,10 +52,11 @@ https://user-images.githubusercontent.com/47209907/233424944-48b39b37-3e26-4866-
 #### Using github
 
 - Clone the complete project using `git clone https://github.com/annmary25/Home-Loan-Status-Prediction.git`
-- Create python3 virtual environment using `virtualenv -p python3 {name_of_environment}`
-- Activate the environment using `source {path_to_virtual_environment}/bin/activate`
-- Install the dependencies using `pip install -r requirements.txt`
-- Finally run the project using `python app.py`
+-  Complete the following steps inside the directory `Home-Loan-Status-Prediction`
+    - Create python3 virtual environment using `virtualenv -p python3 {name_of_environment}`
+    - Activate the environment using `source {path_to_virtual_environment}/bin/activate`
+    - Install the dependencies using `pip install -r requirements.txt`
+    - Finally run the project using `python app.py`
 
 #### Using Docker
 
