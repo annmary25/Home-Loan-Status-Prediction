@@ -69,16 +69,18 @@ Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-sta
 
 #### Data Ingestion 
 
-- The data is read as csv and then split into training and testing and saved as csv file.
+- The dataset is read and split into training and testing.
+- The raw dataset, training dataset and test dataset is saved as csv file in `artifacts` folder.
 
 #### Data Analysis
 
-- % of loan approved - 68 
-- People with credit history have higher chance of getting loan than people without credit history
-- Loans are applied more by men but there isn’t a difference in the percentage of loans approved for men and women
+- 68 % of loans are approved 
+- 78 % of the loan applicants were graduates
+- 80% of loan applicants are men but there isn’t a significant difference in the percentage of loans approved for men and women
 - The average income of self employed people are more than people who are not self employed
-- About 60% of loan applicants does not have dependents
-
+- 60% of loan applicants does not have dependents
+- People with credit history have higher chance of getting loan than people without credit history
+ 
 #### Data Transformation
 
 - A ColumnTransformer Pipeline is created.
