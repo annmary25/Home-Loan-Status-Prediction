@@ -62,9 +62,6 @@ https://user-images.githubusercontent.com/47209907/233424944-48b39b37-3e26-4866-
 
 Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-status-prediction/general
 
-- Pull the code using `docker pull annmary25/home-loan-status-prediction:main`
-- Run the project using `python app.py`
-
 ## Project Approach
 
 #### Data Ingestion 
