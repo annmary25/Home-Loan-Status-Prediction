@@ -70,14 +70,25 @@ Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-sta
 - The raw dataset, training dataset and test dataset is saved as csv file in `artifacts` folder.
 
 #### Data Analysis
-
 - 68 % of loans are approved 
-- 78 % of the loan applicants were graduates
-- 80% of loan applicants are men but there isn’t a significant difference in the percentage of loans approved for men and women
-- The average income of self employed people are more than people who are not self employed
-- 60% of loan applicants does not have dependents
-- People with credit history have higher chance of getting loan than people without credit history
- 
+- 60% of the applicants income lies between 25000 to 60000 
+- 45% of the coapplicant income is 0
+- 50% of the totalincome lies between 40000 and 75000
+- 60% of the loan amount lies in between 10 lakh and 20 lakh 
+- Maximum loan amount is 70 Lakh
+- Loan amount tenure opted by 83% of applicants is 360 months ie. 30 years
+- Applicants with credit history has higher chance of getting loan than applicants without credit hitory. 
+- 80% of applicants whose loan got approved has credit history
+- Loan was rejected for 92% of applicants who did not have credit history
+- 81% of loan applicants are male but there isnt any considerable difference between the loans approved to men and women
+- 65% of loan applicants are married and there is 68% chance that a loan is approved for a married applicant
+- 58% loan applicants does not have dependents
+- 78% of loan applicants are graduates and the employment status % of graduates and not graduates are the same.
+- 80% of people whose loan got approved are graduates
+- 85% of loan applicants are not self employed
+- The % of loan approved for self employed people and employees is same
+- There isn't a considerable difference in the property area however 37% of the property is in semi urban area.
+
 #### Data Transformation
 
 - A ColumnTransformer Pipeline is created.
