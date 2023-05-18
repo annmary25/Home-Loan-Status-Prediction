@@ -88,6 +88,7 @@ Dockerhub link: https://hub.docker.com/repository/docker/annmary25/home-loan-sta
 - 85% of loan applicants are not self employed
 - The % of loan approved for self employed people and employees is same
 - There isn't a considerable difference in the property area however 37% of the property is in semi urban area.
+- The income of employess is higher than self employed people
 
 #### Data Transformation
 
